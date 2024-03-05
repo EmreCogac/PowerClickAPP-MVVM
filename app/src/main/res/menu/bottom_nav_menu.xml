@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Command"
+        android:id="@+id/Command"
+
+        />
+
+    <item
+        android:title="Scan"
+        android:id="@+id/Scanner"
+
+        />
+
+    <item
+        android:title="Support"
+        android:id="@+id/Support"
+
+        />
+
+</menu>

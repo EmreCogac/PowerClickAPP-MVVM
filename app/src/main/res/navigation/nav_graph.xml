@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/slpashScreenFragment">
+
+    <fragment
+        android:id="@+id/slpashScreenFragment"
+        android:name="com.powerclick.app.view.SlpashScreenFragment"
+        android:label="fragment_slpash_screen"
+        tools:layout="@layout/fragment_slpash_screen" >
+        <action
+            android:id="@+id/action_slpashScreenFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
+        <action
+            android:id="@+id/action_slpashScreenFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.powerclick.app.view.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.powerclick.app.view.ScannerFragment"
+        android:label="fragment_scanner"
+        tools:layout="@layout/fragment_scanner" >
+        <action
+            android:id="@+id/action_scannerFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_scannerFragment_to_commandFragment"
+            app:destination="@id/commandFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.powerclick.app.view.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_commandFragment"
+            app:destination="@id/commandFragment" />
+        <action
+            android:id="@+id/action_aboutFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commandFragment"
+        android:name="com.powerclick.app.view.CommandFragment"
+        android:label="fragment_command"
+        tools:layout="@layout/fragment_command" >
+        <action
+            android:id="@+id/action_commandFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+    </fragment>
+</navigation>
