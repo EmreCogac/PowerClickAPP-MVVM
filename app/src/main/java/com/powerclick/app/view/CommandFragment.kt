@@ -1,14 +1,12 @@
 package com.powerclick.app.view
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.powerclick.app.R
 import com.powerclick.app.databinding.FragmentCommandBinding
 import com.powerclick.app.model.IpDataClass
 import com.powerclick.app.shared_preferences.IpDataShared

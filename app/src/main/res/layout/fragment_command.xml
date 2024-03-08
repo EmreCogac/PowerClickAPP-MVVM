@@ -39,7 +39,7 @@
             android:id="@+id/ip"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="ip giriniz"
+            android:hint="@string/ip_giriniz"
             />
 <!--        <Button-->
 <!--            android:id="@+id/test"-->
@@ -52,7 +52,7 @@
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save data withput scan qr code"
+            android:text="@string/save_data_without_scan_qr_code"
             />
 
 

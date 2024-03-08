@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.powerclick.app.R
 import com.powerclick.app.databinding.FragmentAboutBinding
 
 class AboutFragment : Fragment() {
@@ -22,7 +21,7 @@ class AboutFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAboutBinding.inflate(inflater,container,false)
 
         binding.apply {
