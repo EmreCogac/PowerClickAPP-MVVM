@@ -10,50 +10,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
+        android:gravity="top|center"
         android:padding="30dp"
+
         >
 
         <ImageButton
             android:id="@+id/right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_background"
-            android:layout_marginBottom="100dp"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:src="@drawable/rounded_arrow_upward_alt_24"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
             />
         <ImageButton
             android:id="@+id/left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:src="@drawable/rounded_arrow_downward_alt_24"
             />
         <TextView
             android:id="@+id/iptext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="null"
+            android:text=""
             />
         <EditText
             android:id="@+id/ip"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="ip giriniz"
             />
+<!--        <Button-->
+<!--            android:id="@+id/test"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Test"-->
+<!--            />-->
         <Button
-            android:id="@+id/test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Test"
-            />
-        <Button
+            android:layout_marginTop="30dp"
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test"
+            android:text="Save data withput scan qr code"
             />
-
-
-
 
 
     </LinearLayout>

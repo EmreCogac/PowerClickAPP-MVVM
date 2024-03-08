@@ -66,13 +66,13 @@ class CommandFragment : Fragment() {
                 iptext.text = ipDataShared.getString("ip", "no ip")
             }
 
-            test.setOnClickListener {
-                val data =  ipDataShared.getString("ip", "no ip")
-                if(data.isNotEmpty()){
-                    val model = IpDataClass(data)
-                    httpViewModel?.test(model)
-                }
-        }
+//            test.setOnClickListener {
+//                val data =  ipDataShared.getString("ip", "no ip")
+//                if(data.isNotEmpty()){
+//                    val model = IpDataClass(data)
+//                    httpViewModel?.test(model)
+//                }
+//        }
 
         }
         return binding.root
