@@ -8,12 +8,11 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:orientation="horizontal"
         android:id="@+id/bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.90"
-        />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
@@ -32,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/bottom"
         app:menu="@menu/bottom_nav_menu"
-        android:background="@color/design_default_color_secondary_variant"
+        android:background="@drawable/bottom_nav"
         android:visibility="visible"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

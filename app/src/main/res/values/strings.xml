@@ -5,4 +5,7 @@
     <string name="ip">Null</string>
     <string name="ip_giriniz">ip giriniz</string>
     <string name="save_data_without_scan_qr_code">Save data without scan qr code</string>
+    <string name="scan">Scan</string>
+    <string name="support">Support</string>
+    <string name="controller">Controller</string>
 </resources>

@@ -2,21 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Command"
+        android:title="@string/controller"
         android:id="@+id/Command"
-
+        android:icon="@drawable/controller"
         />
 
     <item
-        android:title="Scan"
+        android:title="@string/scan"
         android:id="@+id/Scanner"
+        android:icon="@drawable/qr_code_scanner"
 
         />
 
     <item
-        android:title="Support"
+        android:title="@string/support"
         android:id="@+id/Support"
-
+        android:icon="@drawable/help_center"
         />
 
 </menu>

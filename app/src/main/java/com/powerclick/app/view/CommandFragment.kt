@@ -1,8 +1,12 @@
 package com.powerclick.app.view
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Color.rgb
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -40,6 +44,7 @@ class CommandFragment : Fragment() {
         binding.apply {
             iptext.text = ipDataShared.getString("ip", "no ip")
             left.setOnClickListener{
+                buttonEffect(left)
                 val data =  ipDataShared.getString("ip", "no ip")
                 if (data.isNotEmpty()){
                     val model = IpDataClass(data)
@@ -48,6 +53,7 @@ class CommandFragment : Fragment() {
             }
 
             right.setOnClickListener {
+                buttonEffect(right)
                 val data =  ipDataShared.getString("ip", "no ip")
                 if(data.isNotEmpty()){
                     val model = IpDataClass(data)
@@ -57,6 +63,7 @@ class CommandFragment : Fragment() {
 
 
             save.setOnClickListener {
+                buttonEffect(save)
                 val data  = ip.text.toString()
                 if(data.isNotEmpty()){
                     ipDataShared.setString("ip",data)
@@ -76,5 +83,22 @@ class CommandFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("ClickableViewAccessibility")
+    fun buttonEffect(button: View) {
+        button.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    v.background.setColorFilter(
+                        rgb(191, 207, 231), PorterDuff.Mode.SRC_ATOP)
+                    v.invalidate()
+                }
+                MotionEvent.ACTION_UP -> {
+                    v.background.clearColorFilter()
+                    v.invalidate()
+                }
+            }
+            false
+        }
+    }
 
 }
