@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
@@ -48,6 +49,7 @@ class ScannerFragment : Fragment() {
                 options.setPrompt("Lütfen qr'ı kareye oturturnuz")
                 options.setCameraId(0)
                 options.setOrientationLocked(true)
+                options.setBeepEnabled(false)
                 options.setBarcodeImageEnabled(true)
                 barcodeLauncher.launch(options)
             }
@@ -65,7 +67,14 @@ class ScannerFragment : Fragment() {
             Toast.makeText(context, "Cancelled", Toast.LENGTH_LONG).show()
         } else {
             data = result.contents
-            ipDataShared.setString("ip", data.toString())
+            if(data.toString().isNotEmpty() && !data.toString().contains(" ") && data.toString().length<16 ){
+                ipDataShared.setString("ip", data.toString())
+                binding.qrText.text = ipDataShared.getString("ip","null")
+                findNavController().navigate(R.id.action_scannerFragment_to_commandFragment)
+            }else{
+                Toast.makeText(context, "Bir sorun oluştu", Toast.LENGTH_SHORT).show()
+            }
+
             binding.qrText.text = ipDataShared.getString("ip","null")
         }
     }

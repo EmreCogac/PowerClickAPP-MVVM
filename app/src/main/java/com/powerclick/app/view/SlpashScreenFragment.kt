@@ -1,6 +1,7 @@
 package com.powerclick.app.view
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -25,10 +26,21 @@ class SlpashScreenFragment : Fragment() {
     ): View {
         _binding = FragmentSlpashScreenBinding.inflate(inflater,container,false)
         binding.apply {
-            btn.setOnClickListener {
-                findNavController().navigate(R.id.action_slpashScreenFragment_to_scannerFragment)
-            }
+            object : CountDownTimer(5000, 1000) {
+
+                // Callback function, fired on regular interval
+                override fun onTick(millisUntilFinished: Long) {
+                    denme.setText("" + millisUntilFinished / 1000)
+                }
+
+                // Callback function, fired
+                // when the time is up
+                override fun onFinish() {
+                    findNavController().navigate(R.id.action_slpashScreenFragment_to_scannerFragment)
+                }
+            }.start()
         }
+
         return binding.root
     }
 

@@ -8,4 +8,7 @@
     <string name="scan">Scan</string>
     <string name="support">Support</string>
     <string name="controller">Controller</string>
+    <string name="left">left</string>
+    <string name="right">right</string>
+    <string name="scan_qr">Scan QR</string>
 </resources>

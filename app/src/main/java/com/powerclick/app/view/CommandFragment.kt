@@ -65,8 +65,16 @@ class CommandFragment : Fragment() {
             save.setOnClickListener {
                 buttonEffect(save)
                 val data  = ip.text.toString()
-                if(data.isNotEmpty()){
+                if(data.isNotEmpty() && !data.contains(" ") && data.length<16){
                     ipDataShared.setString("ip",data)
+                }else if (data.isEmpty()){
+                    ip.setError("ip alanu boş bırakılamaz !")
+                }else if(data.contains(" ") ){
+                    ip.setError("ip boşluk içermez !")
+                }else if(data.length>=16){
+                    ip.setError("Gerçek bir ip girdiğinizden emin olun !")
+                }else{
+                    ip.setError("Bir sorun yaşandı, lütfen destek alınız ")
                 }
                 iptext.text = ipDataShared.getString("ip", "no ip")
             }
