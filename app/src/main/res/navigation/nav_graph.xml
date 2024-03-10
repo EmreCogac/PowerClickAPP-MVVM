@@ -10,12 +10,13 @@
         android:name="com.powerclick.app.view.SlpashScreenFragment"
         android:label="fragment_slpash_screen"
         tools:layout="@layout/fragment_slpash_screen" >
-        <action
-            android:id="@+id/action_slpashScreenFragment_to_onboardingFragment"
-            app:destination="@id/onboardingFragment" />
+
         <action
             android:id="@+id/action_slpashScreenFragment_to_scannerFragment"
             app:destination="@id/scannerFragment" />
+        <action
+            android:id="@+id/action_slpashScreenFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
     </fragment>
     <fragment
         android:id="@+id/onboardingFragment"

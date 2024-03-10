@@ -42,10 +42,10 @@ class CommandFragment : Fragment() {
 
 
         binding.apply {
-            iptext.text = ipDataShared.getString("ip", "no ip")
+            iptext.text = ipDataShared.getString("ip", "ip")
             left.setOnClickListener{
                 buttonEffect(left)
-                val data =  ipDataShared.getString("ip", "no ip")
+                val data =  ipDataShared.getString("ip", "ip")
                 if (data.isNotEmpty()){
                     val model = IpDataClass(data)
                     httpViewModel?.left(model)
@@ -54,7 +54,7 @@ class CommandFragment : Fragment() {
 
             right.setOnClickListener {
                 buttonEffect(right)
-                val data =  ipDataShared.getString("ip", "no ip")
+                val data =  ipDataShared.getString("ip", "ip")
                 if(data.isNotEmpty()){
                     val model = IpDataClass(data)
                     httpViewModel?.right(model)
@@ -76,7 +76,7 @@ class CommandFragment : Fragment() {
                 }else{
                     ip.setError("Bir sorun yaşandı, lütfen destek alınız ")
                 }
-                iptext.text = ipDataShared.getString("ip", "no ip")
+                iptext.text = ipDataShared.getString("ip", "ip")
             }
 
 //            test.setOnClickListener {

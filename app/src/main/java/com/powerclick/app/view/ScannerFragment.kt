@@ -54,7 +54,7 @@ class ScannerFragment : Fragment() {
                 barcodeLauncher.launch(options)
             }
 
-            qrText.text = ipDataShared.getString("ip", "null")
+            qrText.text = ipDataShared.getString("ip", "ip")
 
         }
 

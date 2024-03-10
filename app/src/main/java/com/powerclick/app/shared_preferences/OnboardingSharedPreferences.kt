@@ -1,18 +1,20 @@
 package com.powerclick.app.shared_preferences
 
 import android.content.Context
+import android.content.SharedPreferences
 
 
-class OnboardingSharedPreferences(private val context: Context) {
+class OnboardingSharedPreferences(context: Context) {
+    private val prefs : SharedPreferences =
+        context.getSharedPreferences("isFirstTime", Context.MODE_PRIVATE)
 
+    fun getBool(key : String, defValue: Boolean): Boolean{
+        return prefs.getBoolean(key,defValue)
+    }
 
-//    private val IP = "ip"
-//
-//
-//    private val sharedPreferences = context.getSharedPreferences(IP, Context.MODE_PRIVATE)
-//
-//    fun setOnboardingCompleted(completed: String) {
-//        sharedPreferences.edit().putString(IP, completed).apply()
-//    }
+    fun setBool(key : String, defValue: Boolean){
+        prefs.edit().putBoolean(key,defValue).apply()
+    }
+
 
 }
