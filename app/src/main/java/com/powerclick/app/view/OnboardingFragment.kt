@@ -38,5 +38,4 @@ class OnboardingFragment : Fragment() {
         return binding.root
     }
 
-
 }

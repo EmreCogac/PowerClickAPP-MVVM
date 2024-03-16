@@ -3,12 +3,173 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.AboutFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.AboutFragment"
+    android:background="@drawable/backround"
+    >
 
-    <Button
-        android:id="@+id/testButton"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="datetestbutton"
-        />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/backround_support"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintEnd_toEndOf="@id/end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start"
+        app:layout_constraintTop_toTopOf="@id/top"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inner_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inner_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inner_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inner_bottom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/inner_bottom3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+        <ImageButton
+            android:id="@+id/linkedin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/solid"
+            android:contentDescription="@string/left"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/github"
+            app:layout_constraintBottom_toBottomOf="@id/inner_bottom"
+            app:layout_constraintEnd_toStartOf="@id/github"
+            app:layout_constraintStart_toStartOf="@id/inner_start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/github"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/solid"
+            android:contentDescription="@string/left"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/linkedin"
+            app:layout_constraintBottom_toBottomOf="@id/inner_bottom"
+            app:layout_constraintEnd_toStartOf="@id/taluy"
+            app:layout_constraintStart_toEndOf="@id/linkedin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/taluy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/solid"
+            android:contentDescription="@string/left"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/taluy"
+            app:layout_constraintBottom_toBottomOf="@id/inner_bottom"
+            app:layout_constraintEnd_toEndOf="@id/inner_end"
+            app:layout_constraintStart_toEndOf="@id/github"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="Verilen linkteki uygulamayı bilgisayarınıza kurunuz. İki cihazınızın da aynı ağa bağlı olduğundan emin olunuz. Sonrasında ise powerClick.exe'yi çalıştırınız. Açılan penceredeki QR'ı okutunuz. Uygulama kullanıma hazır durumda. İleri için yukarı geri için aşağı basabilirsiniz. İyi sunumlar"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/inner_bottom3"
+            app:layout_constraintEnd_toEndOf="@id/inner_end"
+            app:layout_constraintStart_toStartOf="@id/inner_start"
+            app:layout_constraintTop_toTopOf="@id/inner_bottom"
+
+            />
+
+        <Button
+            android:layout_marginVertical="20dp"
+            android:id="@+id/downloadLink"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:minHeight="35dp"
+            android:text="PowerClik.exe link"
+            android:backgroundTint="#3D3B40"
+            app:layout_constraintTop_toTopOf="@id/inner_bottom3"
+            app:layout_constraintEnd_toEndOf="@id/inner_end"
+            app:layout_constraintStart_toStartOf="@id/inner_start"
+            app:layout_constraintBottom_toTopOf="@id/ttlink"
+            />
+        <Button
+            android:id="@+id/ttlink"
+            android:layout_marginVertical="20dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:minHeight="40dp"
+            android:text="Tutorial link"
+            android:backgroundTint="#3D3B40"
+            app:layout_constraintTop_toBottomOf="@id/downloadLink"
+            app:layout_constraintEnd_toEndOf="@id/inner_end"
+            app:layout_constraintStart_toStartOf="@id/inner_start"
+            app:layout_constraintBottom_toBottomOf="@id/inner_bottom2"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

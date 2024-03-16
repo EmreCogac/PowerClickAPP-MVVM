@@ -36,8 +36,7 @@ class SlpashScreenFragment : Fragment() {
         _binding = FragmentSlpashScreenBinding.inflate(inflater,container,false)
         onboardingSharedPreferences.getBool("isFirstTime", true)
         binding.apply {
-            object : CountDownTimer(3000, 1000) {
-
+            object : CountDownTimer(5000, 1000) {
 
                 override fun onTick(millisUntilFinished: Long) {
 
@@ -45,7 +44,7 @@ class SlpashScreenFragment : Fragment() {
 
                 override fun onFinish() {
                 if(onboardingSharedPreferences.getBool("isFirstTime", true)){
-                    findNavController().navigate(R.id.action_slpashScreenFragment_to_onboardingFragment)
+                    findNavController().navigate(R.id.action_slpashScreenFragment_to_aboutFragment)
                 }else{
                     findNavController().navigate(R.id.action_slpashScreenFragment_to_scannerFragment)
                 }

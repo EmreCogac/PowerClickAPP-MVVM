@@ -3,27 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.SlpashScreenFragment">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
-    <ProgressBar
-        android:layout_width="80dp"
-        android:layout_height="80dp"/>
-    <Button
-        android:id="@+id/btn"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.SlpashScreenFragment"
+    android:background="#63BEE6">
+
+
+
+    <ImageButton
+        android:id="@+id/applogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="go to"
+        android:src="@drawable/applogo"
+        android:background="#63BEE6"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
-    <TextView
-    android:id="@+id/denme"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="go deneme"
-    />
-</LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

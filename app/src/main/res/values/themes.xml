@@ -5,5 +5,9 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.PowerClickapp" parent="Base.Theme.PowerClickapp" />
+    <style name="Theme.PowerClickapp" parent="Base.Theme.PowerClickapp" >
+        <item name = "android:windowActionBar">false</item>
+        <item name = "android:windowNoTitle">true</item>
+    </style>
+
 </resources>

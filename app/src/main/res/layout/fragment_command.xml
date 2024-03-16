@@ -31,57 +31,85 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:orientation="horizontal"
-         app:layout_constraintGuide_percent="0.90" />
+         app:layout_constraintGuide_percent="0.85" />
      <androidx.constraintlayout.widget.Guideline
          android:id="@+id/half"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:orientation="horizontal"
          app:layout_constraintGuide_percent="0.35" />
+     <androidx.constraintlayout.widget.Guideline
+         android:id="@+id/half1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         app:layout_constraintGuide_percent="0.05" />
+     <androidx.constraintlayout.widget.Guideline
+         android:id="@+id/vertical20"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         app:layout_constraintGuide_percent="0.20" />
+     <androidx.constraintlayout.widget.Guideline
+         android:id="@+id/vertical80"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         app:layout_constraintGuide_percent="0.80" />
+     <androidx.constraintlayout.widget.Guideline
+         android:id="@+id/horizon65"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         app:layout_constraintGuide_percent="0.65" />
 
      <ImageButton
          android:id="@+id/right"
-         android:layout_width="250dp"
-         android:layout_height="200dp"
+         android:layout_width="0dp"
+         android:layout_height="0dp"
          android:layout_marginVertical="10dp"
-         android:layout_marginBottom="8dp"
+
          android:background="@drawable/solid"
          android:src="@drawable/expand_less"
+         app:layout_constraintTop_toTopOf="@id/half1"
          app:layout_constraintBottom_toBottomOf="@id/half"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHorizontal_bias="0.495"
-         app:layout_constraintStart_toStartOf="parent"
-         android:contentDescription="@string/right" />
+         app:layout_constraintEnd_toEndOf="@id/vertical80"
+         app:layout_constraintStart_toStartOf="@id/vertical20"
+         android:contentDescription="@string/right"
+         android:scaleType="centerInside"/>
 
      <ImageButton
          android:id="@+id/left"
-         android:layout_width="250dp"
-         android:layout_height="200dp"
+         android:layout_width="0dp"
+         android:layout_height="0dp"
          android:background="@drawable/solid"
          android:src="@drawable/expand_more"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="@id/vertical80"
+         app:layout_constraintStart_toStartOf="@id/vertical20"
          app:layout_constraintTop_toTopOf="@id/half"
          android:layout_marginVertical="10dp"
-         android:contentDescription="@string/left" />
+         app:layout_constraintBottom_toBottomOf="@id/horizon65"
+         android:contentDescription="@string/left"
+         android:scaleType="centerInside"/>
 
      <TextView
          android:id="@+id/iptext"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text=""
+         android:text="e"
          android:textStyle="bold"
          android:textColor="#F8EDFF"
-         app:layout_constraintTop_toBottomOf="@id/left"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="@id/horizon65"
+         app:layout_constraintEnd_toEndOf="@id/vertical80"
+         app:layout_constraintStart_toStartOf="@id/vertical20"
+         app:layout_constraintBottom_toTopOf="@id/ip"
          android:layout_marginVertical="10dp"
          />
      <EditText
          android:textColorHint="#3D3B40"
-         android:layout_width="250dp"
+         android:layout_width="0dp"
          android:layout_height="wrap_content"
-         android:minHeight="48dp"
+         android:minHeight="40dp"
          android:id="@+id/ip"
          android:hint="@string/ip_giriniz"
          android:paddingStart="12dp"
@@ -89,10 +117,10 @@
          android:paddingTop="10dp"
          android:paddingBottom="10dp"
          android:background="@drawable/solid"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintBottom_toTopOf="@id/save"
+         app:layout_constraintStart_toStartOf="@id/vertical20"
+         app:layout_constraintEnd_toEndOf="@id/vertical80"
          app:layout_constraintTop_toBottomOf="@id/iptext"
-         android:layout_marginVertical="10dp"
          android:maxHeight="55dp"
          android:autofillHints="username"
          android:inputType="text" />
@@ -105,14 +133,16 @@
      <!--            android:text="Test"-->
      <!--            />-->
      <Button
-        android:layout_marginVertical="40dp"
+        android:layout_marginVertical="20dp"
          android:id="@+id/save"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+         android:layout_width="0dp"
+         android:layout_height="40dp"
+         android:minHeight="35dp"
          android:text="@string/save_data_without_scan_qr_code"
          android:backgroundTint="#3D3B40"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/ip"
+         app:layout_constraintEnd_toEndOf="@id/vertical80"
+         app:layout_constraintStart_toStartOf="@id/vertical20"
          app:layout_constraintBottom_toBottomOf="@id/bottom"
          />
  </androidx.constraintlayout.widget.ConstraintLayout>
