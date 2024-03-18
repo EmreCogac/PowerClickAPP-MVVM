@@ -14,7 +14,7 @@ import java.io.IOException
 class HTTPRepository(private val application: Application) {
 
     fun leftRequest(ipDataClass: IpDataClass) {
-        val url = "http://${ipDataClass.ip}:8080/data/left"
+        val url = "http://${ipDataClass.ip}/data/left"
         val client = OkHttpClient()
         val request = Request.Builder()
             .url(url)
@@ -40,7 +40,7 @@ class HTTPRepository(private val application: Application) {
     }
 
     fun rightRequest(ipDataClass: IpDataClass) {
-        val url = "http://${ipDataClass.ip}:8080/data/right"
+        val url = "http://${ipDataClass.ip}/data/right"
         val client = OkHttpClient()
         val request = Request.Builder()
             .url(url)
@@ -65,7 +65,7 @@ class HTTPRepository(private val application: Application) {
         })
     }
     fun testRequest(ipDataClass: IpDataClass) {
-        val url = "http://${ipDataClass.ip}:8080/test"
+        val url = "http://${ipDataClass.ip}/test"
         val client = OkHttpClient()
         val request = Request.Builder()
             .url(url)

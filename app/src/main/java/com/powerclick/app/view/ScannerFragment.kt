@@ -67,7 +67,7 @@ class ScannerFragment : Fragment() {
             Toast.makeText(context, "Cancelled", Toast.LENGTH_LONG).show()
         } else {
             data = result.contents
-            if(data.toString().isNotEmpty() && !data.toString().contains(" ") && data.toString().length<16 ){
+            if(data.toString().isNotEmpty() && !data.toString().contains(" ") && data.toString().length<25 ){
                 ipDataShared.setString("ip", data.toString())
                 binding.qrText.text = ipDataShared.getString("ip","null")
                 findNavController().navigate(R.id.action_scannerFragment_to_commandFragment)

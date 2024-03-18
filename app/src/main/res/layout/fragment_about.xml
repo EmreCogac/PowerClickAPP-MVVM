@@ -81,7 +81,7 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.60" />
         <ImageButton
-            android:id="@+id/linkedin"
+            android:id="@+id/github"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginHorizontal="10dp"
@@ -92,12 +92,12 @@
             android:scaleType="centerInside"
             android:src="@drawable/github"
             app:layout_constraintBottom_toBottomOf="@id/inner_bottom"
-            app:layout_constraintEnd_toStartOf="@id/github"
+            app:layout_constraintEnd_toStartOf="@id/linkedin"
             app:layout_constraintStart_toStartOf="@id/inner_start"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/github"
+            android:id="@+id/linkedin"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginHorizontal="10dp"
@@ -109,7 +109,7 @@
             android:src="@drawable/linkedin"
             app:layout_constraintBottom_toBottomOf="@id/inner_bottom"
             app:layout_constraintEnd_toStartOf="@id/taluy"
-            app:layout_constraintStart_toEndOf="@id/linkedin"
+            app:layout_constraintStart_toEndOf="@id/github"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -126,7 +126,7 @@
             android:src="@drawable/taluy"
             app:layout_constraintBottom_toBottomOf="@id/inner_bottom"
             app:layout_constraintEnd_toEndOf="@id/inner_end"
-            app:layout_constraintStart_toEndOf="@id/github"
+            app:layout_constraintStart_toEndOf="@id/linkedin"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
