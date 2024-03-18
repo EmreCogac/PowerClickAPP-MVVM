@@ -11,4 +11,7 @@
     <string name="left">left</string>
     <string name="right">right</string>
     <string name="scan_qr">Scan QR</string>
+    <string name="about_content">Verilen linkteki uygulamayı bilgisayarınıza kurun ve ortak ağa bağlanma izni verin. Uygulamanız hazır durumda qr okutup kullanmaya başlayabilirsiniz. iyi sunumlar!!</string>
+    <string name="powerclikwin_exe_link">PowerClikWin.exe link</string>
+    <string name="tutorial_link">Tutorial link</string>
 </resources>

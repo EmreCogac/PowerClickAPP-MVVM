@@ -38,7 +38,7 @@ class ScannerFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentScannerBinding.inflate(inflater,container,false)
         data = IpDataShared(requireContext()).toString()
 
